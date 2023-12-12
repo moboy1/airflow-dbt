@@ -1,0 +1,12 @@
+staging:
+  target: dev
+  outputs:
+    dev:
+      type: mysql
+      server: host.docker.internal
+      port: 3306
+      database: staging
+      schema: staging
+      username: admin
+      password: password
+      driver: MySQL ODBC 8.0 ANSI Driver

@@ -1,0 +1,17 @@
+[2023-11-27T12:55:13.123+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_example_airflow_dag.airbyte_check_sync __airflow_temporary_run_2023-11-27T12:55:09.136032+00:00__ [queued]>
+[2023-11-27T12:55:13.130+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_example_airflow_dag.airbyte_check_sync __airflow_temporary_run_2023-11-27T12:55:09.136032+00:00__ [queued]>
+[2023-11-27T12:55:13.130+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-27T12:55:13.185+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteJobSensor): airbyte_check_sync> on 2023-11-27 12:55:09.136012+00:00
+[2023-11-27T12:55:13.191+0000] {standard_task_runner.py:57} INFO - Started process 3032 to run task
+[2023-11-27T12:55:13.194+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_example_***_dag', 'airbyte_check_sync', '__***_temporary_run_2023-11-27T12:55:09.136032+00:00__', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/example.py', '--cfg-path', '/tmp/tmppf6wjzwm']
+[2023-11-27T12:55:13.194+0000] {standard_task_runner.py:85} INFO - Job 143: Subtask airbyte_check_sync
+[2023-11-27T12:55:13.265+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_example_airflow_dag.airbyte_check_sync __airflow_temporary_run_2023-11-27T12:55:09.136032+00:00__ [running]> on host 471f0a6f2fee
+[2023-11-27T12:55:13.406+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_example_***_dag' AIRFLOW_CTX_TASK_ID='airbyte_check_sync' AIRFLOW_CTX_EXECUTION_DATE='2023-11-27T12:55:09.136012+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='__***_temporary_run_2023-11-27T12:55:09.136032+00:00__'
+[2023-11-27T12:55:13.414+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte-example' for task execution.
+[2023-11-27T12:55:13.421+0000] {airbyte.py:80} INFO - Waiting for job 70 to complete.
+[2023-11-27T12:56:13.492+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte-example' for task execution.
+[2023-11-27T12:56:13.503+0000] {airbyte.py:75} INFO - Job 70 completed successfully.
+[2023-11-27T12:56:13.503+0000] {base.py:287} INFO - Success criteria met. Exiting.
+[2023-11-27T12:56:13.510+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=airbyte_example_***_dag, task_id=airbyte_check_sync, execution_date=20231127T125509, start_date=20231127T125513, end_date=20231127T125613
+[2023-11-27T12:56:13.592+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-27T12:56:13.627+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,74 @@
+[2023-12-11T18:15:36.070+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_mambu_data_processing_airflow_dag.mambu_data_transformation.journal_entries_clean.run manual__2023-12-11T18:06:59.972538+00:00 [queued]>
+[2023-12-11T18:15:36.075+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_mambu_data_processing_airflow_dag.mambu_data_transformation.journal_entries_clean.run manual__2023-12-11T18:06:59.972538+00:00 [queued]>
+[2023-12-11T18:15:36.075+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-11T18:15:36.081+0000] {taskinstance.py:1382} INFO - Executing <Task(DbtRunLocalOperator): mambu_data_transformation.journal_entries_clean.run> on 2023-12-11 18:06:59.972538+00:00
+[2023-12-11T18:15:36.086+0000] {standard_task_runner.py:57} INFO - Started process 405 to run task
+[2023-12-11T18:15:36.089+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_mambu_data_processing_***_dag', 'mambu_data_transformation.journal_entries_clean.run', 'manual__2023-12-11T18:06:59.972538+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/mambu_data_processing.py', '--cfg-path', '/tmp/tmplqgwlkhe']
+[2023-12-11T18:15:36.092+0000] {standard_task_runner.py:85} INFO - Job 42: Subtask mambu_data_transformation.journal_entries_clean.run
+[2023-12-11T18:15:36.113+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_mambu_data_processing_airflow_dag.mambu_data_transformation.journal_entries_clean.run manual__2023-12-11T18:06:59.972538+00:00 [running]> on host 012a6ed4c30b
+[2023-12-11T18:15:36.470+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_mambu_data_processing_***_dag' AIRFLOW_CTX_TASK_ID='mambu_data_transformation.journal_entries_clean.run' AIRFLOW_CTX_EXECUTION_DATE='2023-12-11T18:06:59.972538+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-11T18:06:59.972538+00:00'
+[2023-12-11T18:15:36.471+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.471+0000[0m] {[34mlocal.py:[0m194} INFO[0m - [35m(astronomer-cosmos)[0m - Cloning project to writable temp directory /tmp/tmpq33k760o from /opt/***/dags/dbt/mambu[0m
+[2023-12-11T18:15:36.471+0000] {local.py:194} INFO - Cloning project to writable temp directory /tmp/tmpq33k760o from /opt/airflow/dags/dbt/mambu
+[2023-12-11T18:15:36.472+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.472+0000[0m] {[34mconfig.py:[0m220} INFO[0m - [35m(astronomer-cosmos)[0m - Using user-supplied profiles.yml at /opt/***/dags/dbt/mambu/profiles.yml[0m
+[2023-12-11T18:15:36.472+0000] {config.py:220} INFO - Using user-supplied profiles.yml at /opt/airflow/dags/dbt/mambu/profiles.yml
+[2023-12-11T18:15:36.472+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.472+0000[0m] {[34mlocal.py:[0m227} INFO[0m - [35m(astronomer-cosmos)[0m - Trying to run the command:
+ ['/home/***/.local/bin/dbt', 'run', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev']
+From /tmp/tmpq33k760o[0m
+[2023-12-11T18:15:36.472+0000] {local.py:227} INFO - Trying to run the command:
+ ['/home/***/.local/bin/dbt', 'run', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev']
+From /tmp/tmpq33k760o
+[2023-12-11T18:15:36.473+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.473+0000[0m] {[34mlocal.py:[0m228} INFO[0m - [35m(astronomer-cosmos)[0m - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])[0m
+[2023-12-11T18:15:36.473+0000] {local.py:228} INFO - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])
+[2023-12-11T18:15:36.473+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.473+0000[0m] {[34msubprocess.py:[0m60} INFO[0m - [35m(astronomer-cosmos)[0m - Tmp dir root location: 
+ /tmp[0m
+[2023-12-11T18:15:36.473+0000] {subprocess.py:60} INFO - Tmp dir root location: 
+ /tmp
+[2023-12-11T18:15:36.473+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.473+0000[0m] {[34msubprocess.py:[0m73} INFO[0m - [35m(astronomer-cosmos)[0m - Running command: ['/home/***/.local/bin/dbt', 'run', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev'][0m
+[2023-12-11T18:15:36.473+0000] {subprocess.py:73} INFO - Running command: ['/home/***/.local/bin/dbt', 'run', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev']
+[2023-12-11T18:15:36.482+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:36.482+0000[0m] {[34msubprocess.py:[0m84} INFO[0m - [35m(astronomer-cosmos)[0m - Command output:[0m
+[2023-12-11T18:15:36.482+0000] {subprocess.py:84} INFO - Command output:
+[2023-12-11T18:15:37.843+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:37.842+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:37  Running with dbt=1.5.9[0m
+[2023-12-11T18:15:37.842+0000] {subprocess.py:94} INFO - [0m18:15:37  Running with dbt=1.5.9
+[2023-12-11T18:15:37.916+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:37.916+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:37  Registered adapter: mysql=1.5.0-a1[0m
+[2023-12-11T18:15:37.916+0000] {subprocess.py:94} INFO - [0m18:15:37  Registered adapter: mysql=1.5.0-a1
+[2023-12-11T18:15:37.922+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:37.922+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:37  Unable to do partial parsing because saved manifest not found. Starting full parse.[0m
+[2023-12-11T18:15:37.922+0000] {subprocess.py:94} INFO - [0m18:15:37  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2023-12-11T18:15:38.184+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.184+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:38  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups[0m
+[2023-12-11T18:15:38.184+0000] {subprocess.py:94} INFO - [0m18:15:38  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-12-11T18:15:38.185+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.185+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:38[0m
+[2023-12-11T18:15:38.185+0000] {subprocess.py:94} INFO - [0m18:15:38
+[2023-12-11T18:15:38.234+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.234+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:38[0m
+[2023-12-11T18:15:38.234+0000] {subprocess.py:94} INFO - [0m18:15:38
+[2023-12-11T18:15:38.234+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.234+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:38  Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).[0m
+[2023-12-11T18:15:38.234+0000] {subprocess.py:94} INFO - [0m18:15:38  Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).
+[2023-12-11T18:15:38.234+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.234+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:15:38  Encountered an error:[0m
+[2023-12-11T18:15:38.234+0000] {subprocess.py:94} INFO - [0m18:15:38  Encountered an error:
+[2023-12-11T18:15:38.235+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.235+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - Database Error[0m
+[2023-12-11T18:15:38.235+0000] {subprocess.py:94} INFO - Database Error
+[2023-12-11T18:15:38.235+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.235+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m -   2003: Can't connect to MySQL server on 'localhost:3306' (111 Connection refused)[0m
+[2023-12-11T18:15:38.235+0000] {subprocess.py:94} INFO -   2003: Can't connect to MySQL server on 'localhost:3306' (111 Connection refused)
+[2023-12-11T18:15:38.853+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.853+0000[0m] {[34msubprocess.py:[0m98} INFO[0m - [35m(astronomer-cosmos)[0m - Command exited with return code 2[0m
+[2023-12-11T18:15:38.853+0000] {subprocess.py:98} INFO - Command exited with return code 2
+[2023-12-11T18:15:38.861+0000] {local.py:110} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v9.json is above dbt-ol supported version 7. This might cause errors.
+[2023-12-11T18:15:38.861+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.861+0000[0m] {[34mlocal.py:[0m244} INFO[0m - [35m(astronomer-cosmos)[0m - Inlets: [][0m
+[2023-12-11T18:15:38.861+0000] {local.py:244} INFO - Inlets: []
+[2023-12-11T18:15:38.862+0000] {log.py:232} WARNING - [[34m2023-12-11T18:15:38.862+0000[0m] {[34mlocal.py:[0m245} INFO[0m - [35m(astronomer-cosmos)[0m - Outlets: [][0m
+[2023-12-11T18:15:38.862+0000] {local.py:245} INFO - Outlets: []
+[2023-12-11T18:15:38.862+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-11T18:15:38.899+0000] {dag.py:3722} INFO - Setting next_dagrun for airbyte_mambu_data_processing_***_dag to 2023-12-11T00:00:00+00:00, run_after=2023-12-12T00:00:00+00:00
+[2023-12-11T18:15:38.945+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/cosmos/operators/local.py", line 452, in execute
+    self.build_and_run_cmd(context=context, cmd_flags=cmd_flags)
+  File "/home/airflow/.local/lib/python3.11/site-packages/cosmos/operators/local.py", line 362, in build_and_run_cmd
+    result = self.run_command(cmd=dbt_cmd, env=env, context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/cosmos/operators/local.py", line 249, in run_command
+    self.exception_handling(result)
+  File "/home/airflow/.local/lib/python3.11/site-packages/cosmos/operators/local.py", line 128, in exception_handling
+    raise AirflowException(
+airflow.exceptions.AirflowException: ('dbt command failed. The command returned a non-zero exit code 2. Details: ', '\x1b[0m18:15:37  Running with dbt=1.5.9', '\x1b[0m18:15:37  Registered adapter: mysql=1.5.0-a1', '\x1b[0m18:15:37  Unable to do partial parsing because saved manifest not found. Starting full parse.', '\x1b[0m18:15:38  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups', '\x1b[0m18:15:38', '\x1b[0m18:15:38', '\x1b[0m18:15:38  Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).', '\x1b[0m18:15:38  Encountered an error:', 'Database Error', "  2003: Can't connect to MySQL server on 'localhost:3306' (111 Connection refused)")
+[2023-12-11T18:15:38.955+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=airbyte_mambu_data_processing_***_dag, task_id=mambu_data_transformation.journal_entries_clean.run, execution_date=20231211T180659, start_date=20231211T181536, end_date=20231211T181538
+[2023-12-11T18:15:38.977+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 42 for task mambu_data_transformation.journal_entries_clean.run (('dbt command failed. The command returned a non-zero exit code 2. Details: ', '\x1b[0m18:15:37  Running with dbt=1.5.9', '\x1b[0m18:15:37  Registered adapter: mysql=1.5.0-a1', '\x1b[0m18:15:37  Unable to do partial parsing because saved manifest not found. Starting full parse.', '\x1b[0m18:15:38  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups', '\x1b[0m18:15:38', '\x1b[0m18:15:38', '\x1b[0m18:15:38  Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).', '\x1b[0m18:15:38  Encountered an error:', 'Database Error', "  2003: Can't connect to MySQL server on 'localhost:3306' (111 Connection refused)"); 405)
+[2023-12-11T18:15:39.009+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-11T18:15:39.080+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

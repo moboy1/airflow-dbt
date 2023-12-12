@@ -1,0 +1,77 @@
+[2023-12-11T18:29:00.368+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_mambu_data_processing_airflow_dag.mambu_data_transformation.journal_entries_clean.test manual__2023-12-11T18:24:33.871852+00:00 [queued]>
+[2023-12-11T18:29:00.371+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_mambu_data_processing_airflow_dag.mambu_data_transformation.journal_entries_clean.test manual__2023-12-11T18:24:33.871852+00:00 [queued]>
+[2023-12-11T18:29:00.372+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-11T18:29:00.377+0000] {taskinstance.py:1382} INFO - Executing <Task(DbtTestLocalOperator): mambu_data_transformation.journal_entries_clean.test> on 2023-12-11 18:24:33.871852+00:00
+[2023-12-11T18:29:00.381+0000] {standard_task_runner.py:57} INFO - Started process 689 to run task
+[2023-12-11T18:29:00.383+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_mambu_data_processing_***_dag', 'mambu_data_transformation.journal_entries_clean.test', 'manual__2023-12-11T18:24:33.871852+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/mambu_data_processing.py', '--cfg-path', '/tmp/tmp0wk0352j']
+[2023-12-11T18:29:00.385+0000] {standard_task_runner.py:85} INFO - Job 48: Subtask mambu_data_transformation.journal_entries_clean.test
+[2023-12-11T18:29:00.414+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_mambu_data_processing_airflow_dag.mambu_data_transformation.journal_entries_clean.test manual__2023-12-11T18:24:33.871852+00:00 [running]> on host 012a6ed4c30b
+[2023-12-11T18:29:00.711+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_mambu_data_processing_***_dag' AIRFLOW_CTX_TASK_ID='mambu_data_transformation.journal_entries_clean.test' AIRFLOW_CTX_EXECUTION_DATE='2023-12-11T18:24:33.871852+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-11T18:24:33.871852+00:00'
+[2023-12-11T18:29:00.712+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.712+0000[0m] {[34mlocal.py:[0m194} INFO[0m - [35m(astronomer-cosmos)[0m - Cloning project to writable temp directory /tmp/tmp3imee2_c from /opt/***/dags/dbt/mambu[0m
+[2023-12-11T18:29:00.712+0000] {local.py:194} INFO - Cloning project to writable temp directory /tmp/tmp3imee2_c from /opt/airflow/dags/dbt/mambu
+[2023-12-11T18:29:00.714+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.714+0000[0m] {[34mconfig.py:[0m220} INFO[0m - [35m(astronomer-cosmos)[0m - Using user-supplied profiles.yml at /opt/***/dags/dbt/mambu/profiles.yml[0m
+[2023-12-11T18:29:00.714+0000] {config.py:220} INFO - Using user-supplied profiles.yml at /opt/airflow/dags/dbt/mambu/profiles.yml
+[2023-12-11T18:29:00.714+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.714+0000[0m] {[34mlocal.py:[0m227} INFO[0m - [35m(astronomer-cosmos)[0m - Trying to run the command:
+ ['/home/***/.local/bin/dbt', 'test', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev']
+From /tmp/tmp3imee2_c[0m
+[2023-12-11T18:29:00.714+0000] {local.py:227} INFO - Trying to run the command:
+ ['/home/***/.local/bin/dbt', 'test', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev']
+From /tmp/tmp3imee2_c
+[2023-12-11T18:29:00.714+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.714+0000[0m] {[34mlocal.py:[0m228} INFO[0m - [35m(astronomer-cosmos)[0m - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])[0m
+[2023-12-11T18:29:00.714+0000] {local.py:228} INFO - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])
+[2023-12-11T18:29:00.715+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.715+0000[0m] {[34msubprocess.py:[0m60} INFO[0m - [35m(astronomer-cosmos)[0m - Tmp dir root location: 
+ /tmp[0m
+[2023-12-11T18:29:00.715+0000] {subprocess.py:60} INFO - Tmp dir root location: 
+ /tmp
+[2023-12-11T18:29:00.715+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.715+0000[0m] {[34msubprocess.py:[0m73} INFO[0m - [35m(astronomer-cosmos)[0m - Running command: ['/home/***/.local/bin/dbt', 'test', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev'][0m
+[2023-12-11T18:29:00.715+0000] {subprocess.py:73} INFO - Running command: ['/home/***/.local/bin/dbt', 'test', '--models', 'journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/mambu', '--profile', 'staging', '--target', 'dev']
+[2023-12-11T18:29:00.723+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:00.723+0000[0m] {[34msubprocess.py:[0m84} INFO[0m - [35m(astronomer-cosmos)[0m - Command output:[0m
+[2023-12-11T18:29:00.723+0000] {subprocess.py:84} INFO - Command output:
+[2023-12-11T18:29:02.252+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.250+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Running with dbt=1.5.9[0m
+[2023-12-11T18:29:02.250+0000] {subprocess.py:94} INFO - [0m18:29:02  Running with dbt=1.5.9
+[2023-12-11T18:29:02.314+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.314+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Registered adapter: mysql=1.5.0-a1[0m
+[2023-12-11T18:29:02.314+0000] {subprocess.py:94} INFO - [0m18:29:02  Registered adapter: mysql=1.5.0-a1
+[2023-12-11T18:29:02.319+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.319+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Unable to do partial parsing because saved manifest not found. Starting full parse.[0m
+[2023-12-11T18:29:02.319+0000] {subprocess.py:94} INFO - [0m18:29:02  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2023-12-11T18:29:02.607+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.607+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups[0m
+[2023-12-11T18:29:02.607+0000] {subprocess.py:94} INFO - [0m18:29:02  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-12-11T18:29:02.609+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.608+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02[0m
+[2023-12-11T18:29:02.608+0000] {subprocess.py:94} INFO - [0m18:29:02
+[2023-12-11T18:29:02.673+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.673+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Concurrency: 1 threads (target='dev')[0m
+[2023-12-11T18:29:02.673+0000] {subprocess.py:94} INFO - [0m18:29:02  Concurrency: 1 threads (target='dev')
+[2023-12-11T18:29:02.673+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.673+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02[0m
+[2023-12-11T18:29:02.673+0000] {subprocess.py:94} INFO - [0m18:29:02
+[2023-12-11T18:29:02.681+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.681+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  1 of 2 START test not_null_journal_entries_clean_accountkey .................... [RUN][0m
+[2023-12-11T18:29:02.681+0000] {subprocess.py:94} INFO - [0m18:29:02  1 of 2 START test not_null_journal_entries_clean_accountkey .................... [RUN]
+[2023-12-11T18:29:02.724+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.724+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  1 of 2 PASS not_null_journal_entries_clean_accountkey .......................... [[32mPASS[0m in 0.04s][0m
+[2023-12-11T18:29:02.724+0000] {subprocess.py:94} INFO - [0m18:29:02  1 of 2 PASS not_null_journal_entries_clean_accountkey .......................... [[32mPASS[0m in 0.04s]
+[2023-12-11T18:29:02.724+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.724+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  2 of 2 START test unique_journal_entries_clean_accountkey ...................... [RUN][0m
+[2023-12-11T18:29:02.724+0000] {subprocess.py:94} INFO - [0m18:29:02  2 of 2 START test unique_journal_entries_clean_accountkey ...................... [RUN]
+[2023-12-11T18:29:02.754+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.754+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  2 of 2 PASS unique_journal_entries_clean_accountkey ............................ [[32mPASS[0m in 0.03s][0m
+[2023-12-11T18:29:02.754+0000] {subprocess.py:94} INFO - [0m18:29:02  2 of 2 PASS unique_journal_entries_clean_accountkey ............................ [[32mPASS[0m in 0.03s]
+[2023-12-11T18:29:02.772+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.772+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02[0m
+[2023-12-11T18:29:02.772+0000] {subprocess.py:94} INFO - [0m18:29:02
+[2023-12-11T18:29:02.773+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.773+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Finished running 2 tests in 0 hours 0 minutes and 0.16 seconds (0.16s).[0m
+[2023-12-11T18:29:02.773+0000] {subprocess.py:94} INFO - [0m18:29:02  Finished running 2 tests in 0 hours 0 minutes and 0.16 seconds (0.16s).
+[2023-12-11T18:29:02.777+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.777+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02[0m
+[2023-12-11T18:29:02.777+0000] {subprocess.py:94} INFO - [0m18:29:02
+[2023-12-11T18:29:02.777+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.777+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  [32mCompleted successfully[0m[0m
+[2023-12-11T18:29:02.777+0000] {subprocess.py:94} INFO - [0m18:29:02  [32mCompleted successfully[0m
+[2023-12-11T18:29:02.777+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.777+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02[0m
+[2023-12-11T18:29:02.777+0000] {subprocess.py:94} INFO - [0m18:29:02
+[2023-12-11T18:29:02.778+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:02.778+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2[0m
+[2023-12-11T18:29:02.778+0000] {subprocess.py:94} INFO - [0m18:29:02  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2023-12-11T18:29:03.086+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:03.086+0000[0m] {[34msubprocess.py:[0m98} INFO[0m - [35m(astronomer-cosmos)[0m - Command exited with return code 0[0m
+[2023-12-11T18:29:03.086+0000] {subprocess.py:98} INFO - Command exited with return code 0
+[2023-12-11T18:29:03.107+0000] {local.py:110} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v9.json is above dbt-ol supported version 7. This might cause errors.
+[2023-12-11T18:29:03.113+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:03.113+0000[0m] {[34mlocal.py:[0m244} INFO[0m - [35m(astronomer-cosmos)[0m - Inlets: [][0m
+[2023-12-11T18:29:03.113+0000] {local.py:244} INFO - Inlets: []
+[2023-12-11T18:29:03.114+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:03.114+0000[0m] {[34mlocal.py:[0m245} INFO[0m - [35m(astronomer-cosmos)[0m - Outlets: [][0m
+[2023-12-11T18:29:03.114+0000] {local.py:245} INFO - Outlets: []
+[2023-12-11T18:29:03.114+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-11T18:29:03.166+0000] {dag.py:3722} INFO - Setting next_dagrun for airbyte_mambu_data_processing_***_dag to 2023-12-11T00:00:00+00:00, run_after=2023-12-12T00:00:00+00:00
+[2023-12-11T18:29:03.193+0000] {log.py:232} WARNING - [[34m2023-12-11T18:29:03.193+0000[0m] {[34mlocal.py:[0m363} INFO[0m - [35m(astronomer-cosmos)[0m - [0m18:29:02  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2[0m
+[2023-12-11T18:29:03.193+0000] {local.py:363} INFO - [0m18:29:02  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2023-12-11T18:29:03.201+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=airbyte_mambu_data_processing_***_dag, task_id=mambu_data_transformation.journal_entries_clean.test, execution_date=20231211T182433, start_date=20231211T182900, end_date=20231211T182903
+[2023-12-11T18:29:03.245+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-11T18:29:03.275+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

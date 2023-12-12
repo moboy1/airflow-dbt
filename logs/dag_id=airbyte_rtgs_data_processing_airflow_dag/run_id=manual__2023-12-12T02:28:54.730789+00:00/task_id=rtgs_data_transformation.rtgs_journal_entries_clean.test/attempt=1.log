@@ -1,0 +1,83 @@
+[2023-12-12T02:31:42.429+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_rtgs_data_processing_airflow_dag.rtgs_data_transformation.rtgs_journal_entries_clean.test manual__2023-12-12T02:28:54.730789+00:00 [queued]>
+[2023-12-12T02:31:42.434+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_rtgs_data_processing_airflow_dag.rtgs_data_transformation.rtgs_journal_entries_clean.test manual__2023-12-12T02:28:54.730789+00:00 [queued]>
+[2023-12-12T02:31:42.434+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-12T02:31:42.441+0000] {taskinstance.py:1382} INFO - Executing <Task(DbtTestLocalOperator): rtgs_data_transformation.rtgs_journal_entries_clean.test> on 2023-12-12 02:28:54.730789+00:00
+[2023-12-12T02:31:42.449+0000] {standard_task_runner.py:57} INFO - Started process 947 to run task
+[2023-12-12T02:31:42.453+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_rtgs_data_processing_***_dag', 'rtgs_data_transformation.rtgs_journal_entries_clean.test', 'manual__2023-12-12T02:28:54.730789+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/rtgs_data_processing.py', '--cfg-path', '/tmp/tmpe6un8d2v']
+[2023-12-12T02:31:42.455+0000] {standard_task_runner.py:85} INFO - Job 118: Subtask rtgs_data_transformation.rtgs_journal_entries_clean.test
+[2023-12-12T02:31:42.478+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_rtgs_data_processing_airflow_dag.rtgs_data_transformation.rtgs_journal_entries_clean.test manual__2023-12-12T02:28:54.730789+00:00 [running]> on host 86ddea81acd7
+[2023-12-12T02:31:42.507+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_rtgs_data_processing_***_dag' AIRFLOW_CTX_TASK_ID='rtgs_data_transformation.rtgs_journal_entries_clean.test' AIRFLOW_CTX_EXECUTION_DATE='2023-12-12T02:28:54.730789+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-12T02:28:54.730789+00:00'
+[2023-12-12T02:31:42.508+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.508+0000[0m] {[34mlocal.py:[0m194} INFO[0m - [35m(astronomer-cosmos)[0m - Cloning project to writable temp directory /tmp/tmp3jg_sz43 from /opt/***/dags/dbt/rtgs[0m
+[2023-12-12T02:31:42.508+0000] {local.py:194} INFO - Cloning project to writable temp directory /tmp/tmp3jg_sz43 from /opt/airflow/dags/dbt/rtgs
+[2023-12-12T02:31:42.509+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.509+0000[0m] {[34mconfig.py:[0m220} INFO[0m - [35m(astronomer-cosmos)[0m - Using user-supplied profiles.yml at /opt/***/dags/dbt/rtgs/profiles.yml[0m
+[2023-12-12T02:31:42.509+0000] {config.py:220} INFO - Using user-supplied profiles.yml at /opt/airflow/dags/dbt/rtgs/profiles.yml
+[2023-12-12T02:31:42.510+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.510+0000[0m] {[34mlocal.py:[0m227} INFO[0m - [35m(astronomer-cosmos)[0m - Trying to run the command:
+ ['/home/***/.local/bin/dbt', 'test', '--models', 'rtgs_journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/rtgs', '--profile', 'staging', '--target', 'dev']
+From /tmp/tmp3jg_sz43[0m
+[2023-12-12T02:31:42.510+0000] {local.py:227} INFO - Trying to run the command:
+ ['/home/***/.local/bin/dbt', 'test', '--models', 'rtgs_journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/rtgs', '--profile', 'staging', '--target', 'dev']
+From /tmp/tmp3jg_sz43
+[2023-12-12T02:31:42.510+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.510+0000[0m] {[34mlocal.py:[0m228} INFO[0m - [35m(astronomer-cosmos)[0m - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])[0m
+[2023-12-12T02:31:42.510+0000] {local.py:228} INFO - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])
+[2023-12-12T02:31:42.510+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.510+0000[0m] {[34msubprocess.py:[0m60} INFO[0m - [35m(astronomer-cosmos)[0m - Tmp dir root location: 
+ /tmp[0m
+[2023-12-12T02:31:42.510+0000] {subprocess.py:60} INFO - Tmp dir root location: 
+ /tmp
+[2023-12-12T02:31:42.511+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.511+0000[0m] {[34msubprocess.py:[0m73} INFO[0m - [35m(astronomer-cosmos)[0m - Running command: ['/home/***/.local/bin/dbt', 'test', '--models', 'rtgs_journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/rtgs', '--profile', 'staging', '--target', 'dev'][0m
+[2023-12-12T02:31:42.511+0000] {subprocess.py:73} INFO - Running command: ['/home/***/.local/bin/dbt', 'test', '--models', 'rtgs_journal_entries_clean', '--profiles-dir', '/opt/***/dags/dbt/rtgs', '--profile', 'staging', '--target', 'dev']
+[2023-12-12T02:31:42.519+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:42.518+0000[0m] {[34msubprocess.py:[0m84} INFO[0m - [35m(astronomer-cosmos)[0m - Command output:[0m
+[2023-12-12T02:31:42.518+0000] {subprocess.py:84} INFO - Command output:
+[2023-12-12T02:31:43.587+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.587+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  Running with dbt=1.5.9[0m
+[2023-12-12T02:31:43.587+0000] {subprocess.py:94} INFO - [0m02:31:43  Running with dbt=1.5.9
+[2023-12-12T02:31:43.644+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.644+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  Registered adapter: mysql=1.5.0-a1[0m
+[2023-12-12T02:31:43.644+0000] {subprocess.py:94} INFO - [0m02:31:43  Registered adapter: mysql=1.5.0-a1
+[2023-12-12T02:31:43.649+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.649+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  Unable to do partial parsing because saved manifest not found. Starting full parse.[0m
+[2023-12-12T02:31:43.649+0000] {subprocess.py:94} INFO - [0m02:31:43  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2023-12-12T02:31:43.898+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.898+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.[0m
+[2023-12-12T02:31:43.898+0000] {subprocess.py:94} INFO - [0m02:31:43  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-12-12T02:31:43.898+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.898+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - There are 1 unused configuration paths:[0m
+[2023-12-12T02:31:43.898+0000] {subprocess.py:94} INFO - There are 1 unused configuration paths:
+[2023-12-12T02:31:43.899+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.899+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - - models.journal_entries[0m
+[2023-12-12T02:31:43.899+0000] {subprocess.py:94} INFO - - models.journal_entries
+[2023-12-12T02:31:43.904+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.904+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups[0m
+[2023-12-12T02:31:43.904+0000] {subprocess.py:94} INFO - [0m02:31:43  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 300 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-12-12T02:31:43.904+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.904+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43[0m
+[2023-12-12T02:31:43.904+0000] {subprocess.py:94} INFO - [0m02:31:43
+[2023-12-12T02:31:43.953+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.953+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  Concurrency: 1 threads (target='dev')[0m
+[2023-12-12T02:31:43.953+0000] {subprocess.py:94} INFO - [0m02:31:43  Concurrency: 1 threads (target='dev')
+[2023-12-12T02:31:43.953+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.953+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43[0m
+[2023-12-12T02:31:43.953+0000] {subprocess.py:94} INFO - [0m02:31:43
+[2023-12-12T02:31:43.963+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.963+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  1 of 2 START test not_null_rtgs_journal_entries_clean_accountkey ............... [RUN][0m
+[2023-12-12T02:31:43.963+0000] {subprocess.py:94} INFO - [0m02:31:43  1 of 2 START test not_null_rtgs_journal_entries_clean_accountkey ............... [RUN]
+[2023-12-12T02:31:43.992+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.992+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  1 of 2 PASS not_null_rtgs_journal_entries_clean_accountkey ..................... [[32mPASS[0m in 0.03s][0m
+[2023-12-12T02:31:43.992+0000] {subprocess.py:94} INFO - [0m02:31:43  1 of 2 PASS not_null_rtgs_journal_entries_clean_accountkey ..................... [[32mPASS[0m in 0.03s]
+[2023-12-12T02:31:43.993+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:43.993+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:43  2 of 2 START test unique_rtgs_journal_entries_clean_accountkey ................. [RUN][0m
+[2023-12-12T02:31:43.993+0000] {subprocess.py:94} INFO - [0m02:31:43  2 of 2 START test unique_rtgs_journal_entries_clean_accountkey ................. [RUN]
+[2023-12-12T02:31:44.007+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.007+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44  2 of 2 PASS unique_rtgs_journal_entries_clean_accountkey ....................... [[32mPASS[0m in 0.01s][0m
+[2023-12-12T02:31:44.007+0000] {subprocess.py:94} INFO - [0m02:31:44  2 of 2 PASS unique_rtgs_journal_entries_clean_accountkey ....................... [[32mPASS[0m in 0.01s]
+[2023-12-12T02:31:44.015+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.015+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44[0m
+[2023-12-12T02:31:44.015+0000] {subprocess.py:94} INFO - [0m02:31:44
+[2023-12-12T02:31:44.015+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.015+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44  Finished running 2 tests in 0 hours 0 minutes and 0.11 seconds (0.11s).[0m
+[2023-12-12T02:31:44.015+0000] {subprocess.py:94} INFO - [0m02:31:44  Finished running 2 tests in 0 hours 0 minutes and 0.11 seconds (0.11s).
+[2023-12-12T02:31:44.018+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.018+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44[0m
+[2023-12-12T02:31:44.018+0000] {subprocess.py:94} INFO - [0m02:31:44
+[2023-12-12T02:31:44.018+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.018+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44  [32mCompleted successfully[0m[0m
+[2023-12-12T02:31:44.018+0000] {subprocess.py:94} INFO - [0m02:31:44  [32mCompleted successfully[0m
+[2023-12-12T02:31:44.018+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.018+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44[0m
+[2023-12-12T02:31:44.018+0000] {subprocess.py:94} INFO - [0m02:31:44
+[2023-12-12T02:31:44.019+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:44.019+0000[0m] {[34msubprocess.py:[0m94} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2[0m
+[2023-12-12T02:31:44.019+0000] {subprocess.py:94} INFO - [0m02:31:44  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2023-12-12T02:31:45.345+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:45.345+0000[0m] {[34msubprocess.py:[0m98} INFO[0m - [35m(astronomer-cosmos)[0m - Command exited with return code 0[0m
+[2023-12-12T02:31:45.345+0000] {subprocess.py:98} INFO - Command exited with return code 0
+[2023-12-12T02:31:45.352+0000] {local.py:110} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v9.json is above dbt-ol supported version 7. This might cause errors.
+[2023-12-12T02:31:45.354+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:45.354+0000[0m] {[34mlocal.py:[0m244} INFO[0m - [35m(astronomer-cosmos)[0m - Inlets: [][0m
+[2023-12-12T02:31:45.354+0000] {local.py:244} INFO - Inlets: []
+[2023-12-12T02:31:45.355+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:45.355+0000[0m] {[34mlocal.py:[0m245} INFO[0m - [35m(astronomer-cosmos)[0m - Outlets: [][0m
+[2023-12-12T02:31:45.355+0000] {local.py:245} INFO - Outlets: []
+[2023-12-12T02:31:45.355+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-12T02:31:45.369+0000] {dag.py:3722} INFO - Setting next_dagrun for airbyte_rtgs_data_processing_***_dag to 2023-12-12T00:00:00+00:00, run_after=2023-12-13T00:00:00+00:00
+[2023-12-12T02:31:45.379+0000] {log.py:232} WARNING - [[34m2023-12-12T02:31:45.379+0000[0m] {[34mlocal.py:[0m363} INFO[0m - [35m(astronomer-cosmos)[0m - [0m02:31:44  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2[0m
+[2023-12-12T02:31:45.379+0000] {local.py:363} INFO - [0m02:31:44  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2023-12-12T02:31:45.383+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=airbyte_rtgs_data_processing_***_dag, task_id=rtgs_data_transformation.rtgs_journal_entries_clean.test, execution_date=20231212T022854, start_date=20231212T023142, end_date=20231212T023145
+[2023-12-12T02:31:45.405+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-12T02:31:45.418+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

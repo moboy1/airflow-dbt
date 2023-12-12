@@ -1,0 +1,14 @@
+[2023-11-27T12:40:30.119+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_example_airflow_dag.airbyte_trigger_sync manual__2023-11-27T12:40:28.436198+00:00 [queued]>
+[2023-11-27T12:40:30.131+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_example_airflow_dag.airbyte_trigger_sync manual__2023-11-27T12:40:28.436198+00:00 [queued]>
+[2023-11-27T12:40:30.131+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-27T12:40:30.169+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteTriggerSyncOperator): airbyte_trigger_sync> on 2023-11-27 12:40:28.436198+00:00
+[2023-11-27T12:40:30.175+0000] {standard_task_runner.py:57} INFO - Started process 2716 to run task
+[2023-11-27T12:40:30.181+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_example_***_dag', 'airbyte_trigger_sync', 'manual__2023-11-27T12:40:28.436198+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/example.py', '--cfg-path', '/tmp/tmprbl0p7is']
+[2023-11-27T12:40:30.182+0000] {standard_task_runner.py:85} INFO - Job 112: Subtask airbyte_trigger_sync
+[2023-11-27T12:40:30.266+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_example_airflow_dag.airbyte_trigger_sync manual__2023-11-27T12:40:28.436198+00:00 [running]> on host 471f0a6f2fee
+[2023-11-27T12:40:30.427+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_example_***_dag' AIRFLOW_CTX_TASK_ID='airbyte_trigger_sync' AIRFLOW_CTX_EXECUTION_DATE='2023-11-27T12:40:28.436198+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-27T12:40:28.436198+00:00'
+[2023-11-27T12:40:30.445+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte-example' for task execution.
+[2023-11-27T12:40:32.536+0000] {airbyte.py:76} INFO - Job 62 was submitted to Airbyte Server
+[2023-11-27T12:40:32.626+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=airbyte_example_***_dag, task_id=airbyte_trigger_sync, execution_date=20231127T124028, start_date=20231127T124030, end_date=20231127T124032
+[2023-11-27T12:40:32.728+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-27T12:40:32.787+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

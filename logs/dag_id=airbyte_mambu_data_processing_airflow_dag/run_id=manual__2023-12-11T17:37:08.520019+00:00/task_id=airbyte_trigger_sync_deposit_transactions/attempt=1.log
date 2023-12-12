@@ -1,0 +1,14 @@
+[2023-12-11T17:37:14.893+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_mambu_data_processing_airflow_dag.airbyte_trigger_sync_deposit_transactions manual__2023-12-11T17:37:08.520019+00:00 [queued]>
+[2023-12-11T17:37:14.912+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_mambu_data_processing_airflow_dag.airbyte_trigger_sync_deposit_transactions manual__2023-12-11T17:37:08.520019+00:00 [queued]>
+[2023-12-11T17:37:14.913+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-11T17:37:14.925+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteTriggerSyncOperator): airbyte_trigger_sync_deposit_transactions> on 2023-12-11 17:37:08.520019+00:00
+[2023-12-11T17:37:14.940+0000] {standard_task_runner.py:57} INFO - Started process 122 to run task
+[2023-12-11T17:37:14.943+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_mambu_data_processing_***_dag', 'airbyte_trigger_sync_deposit_transactions', 'manual__2023-12-11T17:37:08.520019+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/mambu_data_processing.py', '--cfg-path', '/tmp/tmp7bnp9ad6']
+[2023-12-11T17:37:14.948+0000] {standard_task_runner.py:85} INFO - Job 28: Subtask airbyte_trigger_sync_deposit_transactions
+[2023-12-11T17:37:14.985+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_mambu_data_processing_airflow_dag.airbyte_trigger_sync_deposit_transactions manual__2023-12-11T17:37:08.520019+00:00 [running]> on host 7a42d9ce34c3
+[2023-12-11T17:37:15.026+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_mambu_data_processing_***_dag' AIRFLOW_CTX_TASK_ID='airbyte_trigger_sync_deposit_transactions' AIRFLOW_CTX_EXECUTION_DATE='2023-12-11T17:37:08.520019+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-11T17:37:08.520019+00:00'
+[2023-12-11T17:37:15.479+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte' for task execution.
+[2023-12-11T17:37:15.991+0000] {airbyte.py:76} INFO - Job 6 was submitted to Airbyte Server
+[2023-12-11T17:37:16.037+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=airbyte_mambu_data_processing_***_dag, task_id=airbyte_trigger_sync_deposit_transactions, execution_date=20231211T173708, start_date=20231211T173714, end_date=20231211T173716
+[2023-12-11T17:37:16.097+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-11T17:37:16.169+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

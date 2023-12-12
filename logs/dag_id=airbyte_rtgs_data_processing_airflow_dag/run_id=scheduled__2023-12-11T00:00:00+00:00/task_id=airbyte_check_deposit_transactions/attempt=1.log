@@ -1,0 +1,34 @@
+[2023-12-12T01:15:00.778+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airbyte_rtgs_data_processing_airflow_dag.airbyte_check_deposit_transactions scheduled__2023-12-11T00:00:00+00:00 [queued]>
+[2023-12-12T01:15:00.787+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airbyte_rtgs_data_processing_airflow_dag.airbyte_check_deposit_transactions scheduled__2023-12-11T00:00:00+00:00 [queued]>
+[2023-12-12T01:15:00.788+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-12T01:15:00.800+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteJobSensor): airbyte_check_deposit_transactions> on 2023-12-11 00:00:00+00:00
+[2023-12-12T01:15:00.808+0000] {standard_task_runner.py:57} INFO - Started process 117 to run task
+[2023-12-12T01:15:00.812+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'airbyte_rtgs_data_processing_***_dag', 'airbyte_check_deposit_transactions', 'scheduled__2023-12-11T00:00:00+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/rtgs_data_processing.py', '--cfg-path', '/tmp/tmpc6a3i3_y']
+[2023-12-12T01:15:00.816+0000] {standard_task_runner.py:85} INFO - Job 63: Subtask airbyte_check_deposit_transactions
+[2023-12-12T01:15:00.888+0000] {task_command.py:416} INFO - Running <TaskInstance: airbyte_rtgs_data_processing_airflow_dag.airbyte_check_deposit_transactions scheduled__2023-12-11T00:00:00+00:00 [running]> on host 86ddea81acd7
+[2023-12-12T01:15:01.646+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='airbyte_rtgs_data_processing_***_dag' AIRFLOW_CTX_TASK_ID='airbyte_check_deposit_transactions' AIRFLOW_CTX_EXECUTION_DATE='2023-12-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-11T00:00:00+00:00'
+[2023-12-12T01:15:01.664+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte' for task execution.
+[2023-12-12T01:15:01.800+0000] {airbyte.py:80} INFO - Waiting for job 18 to complete.
+[2023-12-12T01:16:01.853+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte' for task execution.
+[2023-12-12T01:16:01.891+0000] {airbyte.py:80} INFO - Waiting for job 18 to complete.
+[2023-12-12T01:17:01.933+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte' for task execution.
+[2023-12-12T01:17:02.092+0000] {airbyte.py:80} INFO - Waiting for job 18 to complete.
+[2023-12-12T01:18:02.110+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte' for task execution.
+[2023-12-12T01:18:02.185+0000] {airbyte.py:80} INFO - Waiting for job 18 to complete.
+[2023-12-12T01:19:02.218+0000] {base.py:73} INFO - Using connection ID '***-call-to-airbyte' for task execution.
+[2023-12-12T01:19:02.446+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/sensors/base.py", line 257, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/sensors/base.py", line 239, in execute
+    poke_return = self.poke(context)
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 73, in poke
+    raise AirflowException(message)
+airflow.exceptions.AirflowException: Job was cancelled: 
+<Response [200]>
+[2023-12-12T01:19:02.455+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=airbyte_rtgs_data_processing_***_dag, task_id=airbyte_check_deposit_transactions, execution_date=20231211T000000, start_date=20231212T011500, end_date=20231212T011902
+[2023-12-12T01:19:02.506+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 63 for task airbyte_check_deposit_transactions (Job was cancelled: 
+<Response [200]>; 117)
+[2023-12-12T01:19:02.577+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-12T01:19:03.338+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
