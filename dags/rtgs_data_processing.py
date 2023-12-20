@@ -19,7 +19,7 @@ PROFILE_YAML_PATH = Path(__file__).parent / "dbt/rtgs/profiles.yml"
 
 AIRFLOW_MYSQL_CONNECTION_ID = 'airflow-mysql'
 MYSQL_DATABASE = 'staging'
-MYSQL_QUERY = 'SELECT * FROM rtgs_journal_entries_clean'
+MYSQL_QUERY = 'SELECT * FROM stg_rtgs_journal_entries_clean'
 
 
 # Define a Python function to save the data as a local file
@@ -32,7 +32,7 @@ def save_data_to_local_file(*args, **kwargs):
     conn.close()
 
     df = pd.DataFrame(data, columns=[desc[0] for desc in cursor.description])
-    df.to_csv('/opt/airflow/output/data.txt', sep='|', index=False)
+    df.to_csv('/opt/airflow/output/stg_rtgs_journals_entries.txt', sep='|', index=False)
 
 
 with DAG(dag_id='airbyte_rtgs_data_processing_airflow_dag',
@@ -67,7 +67,7 @@ with DAG(dag_id='airbyte_rtgs_data_processing_airflow_dag',
         airbyte_job_id=trigger_airbyte_sync_deposit_transactions.output
     )
 
-    data_transformation = DbtTaskGroup(
+    rtgs_data_transformation = DbtTaskGroup(
         group_id="rtgs_data_transformation",
         project_config=ProjectConfig(
             DBT_ROOT_PATH / "rtgs",
@@ -94,7 +94,7 @@ with DAG(dag_id='airbyte_rtgs_data_processing_airflow_dag',
 
 trigger_airbyte_sync_journal_entries >> wait_for_sync_completion_journal_entries
 trigger_airbyte_sync_deposit_transactions >> wait_for_sync_completion_deposit_transactions
-wait_for_sync_completion_journal_entries >> data_transformation
-wait_for_sync_completion_deposit_transactions >> data_transformation
-data_transformation >> extract_data_from_mysql
+wait_for_sync_completion_journal_entries >> rtgs_data_transformation
+wait_for_sync_completion_deposit_transactions >> rtgs_data_transformation
+rtgs_data_transformation >> extract_data_from_mysql
 extract_data_from_mysql >> save_data_to_local_file

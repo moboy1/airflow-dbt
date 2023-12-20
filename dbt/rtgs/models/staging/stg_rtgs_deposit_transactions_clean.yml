@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+  - name: stg_rtgs_deposit_transactions_clean
+    description: "RTGS Deposit Transactions"
+    columns:
+      - name: id
+        description: "The deposit transaction id"
+        tests:
+          - unique
+          - not_null
+      - name: transactionreferencenumber
+        description: "The deposit transaction reference number"
+        tests:
+          - not_null

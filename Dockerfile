@@ -1,4 +1,4 @@
-FROM ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.7.3-python3.11}
+FROM ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.7.3-python3.11.6}
 
 USER root
 RUN apt update && apt install -y git

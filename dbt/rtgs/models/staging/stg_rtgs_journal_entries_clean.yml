@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+  - name: stg_rtgs_journal_entries_clean
+    description: "RTGS Journal Entries"
+    columns:
+      - name: journal_entries_encodedkey
+        description: "The encoded key for journal entries"
+        tests:
+          - unique
+          - not_null
+      - name: gl_account_encodedkey
+        description: "The encoded key for general ledger account"
+        tests:
+          - not_null
